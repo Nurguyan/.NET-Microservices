@@ -13,6 +13,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using CommandsService.Data;
 using Microsoft.EntityFrameworkCore;
+using CommandsService.EventProcessing;
+using CommandsService.AsyncDataServices;
 
 namespace CommandsService
 {
@@ -30,6 +32,9 @@ namespace CommandsService
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
             services.AddScoped<ICommandRepo, CommandRepo>();
             services.AddControllers();
+
+            services.AddHostedService<MessageBusSubscriber>();
+            services.AddSingleton<IEventProcessor, EventProcessor>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
