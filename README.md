@@ -15,6 +15,6 @@ Link to the course: https://youtu.be/DgVjEo3OGBI
 ![image](https://user-images.githubusercontent.com/34334610/135752358-af8be8a6-7da4-46d8-a90d-6ea01c65547e.png)
 
 ## DockerHub
-Docker pull commands
-`docker pull nurguyan/platformservice`
-`docker pull nurguyan/commandsservice`
+Docker pull commands:
+PlatofrmService: `docker pull nurguyan/platformservice`
+CommandsService: `docker pull nurguyan/commandsservice`
