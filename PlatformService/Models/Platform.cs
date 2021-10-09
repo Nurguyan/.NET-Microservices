@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlatformService.Models
 {
-    public class Platform
+    public sealed class Platform
     {
         [Key]
         [Required]

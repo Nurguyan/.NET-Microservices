@@ -4,10 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>1e6c1a80-323e-4660-acde-e0c6d0bae9cb</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Description>Demo .NET microservices project.</Description>
+    <Copyright>Nurguyan</Copyright>
+    <RepositoryUrl>https://github.com/Nurguyan/.NET-Microservices.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -20,4 +24,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Protobuf Include="Protos\platforms.proto" GrpcServices="Server" />
+	</ItemGroup>
 </Project>
